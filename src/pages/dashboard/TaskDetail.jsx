@@ -113,7 +113,6 @@ export default function TaskDetail() {
       <TaskModal
         open={editModalOpen}
         onClose={() => setEditModalOpen(false)}
-        projectId={projectId}
         task={task}
       />
     </div>

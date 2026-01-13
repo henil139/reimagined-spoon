@@ -25,12 +25,15 @@ export function useTask(projectId, taskId) {
 }
 
 // Create task
-export function useCreateTask(projectId) {
+export function useCreateTask() {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: (data) =>
-      apiClient.post(`/projects/${projectId}/tasks`, data),
+    mutationFn: (data) =>{
+
+      console.log("data",data) ||
+      apiClient.post(`/projects/${data?.project_id}/tasks`, data)
+    },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['tasks', projectId] });
     },

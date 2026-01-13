@@ -248,7 +248,6 @@ export default function ProjectDetail() {
       <TaskModal
         open={taskModalOpen}
         onClose={() => setTaskModalOpen(false)}
-        projectId={id}
         members={project.members}
       />
 

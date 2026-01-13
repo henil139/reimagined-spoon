@@ -128,7 +128,6 @@ export default function Tasks() {
       <TaskModal
         open={taskModalOpen}
         onClose={() => setTaskModalOpen(false)}
-        projectId={selectedProjectId}
       />
 
       <ConfirmDialog
